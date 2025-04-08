@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Заводим переменную USER
+USER="Алексей"
+
+# Печатаем дату
+date
+
+# Приветствие
+echo "Hello $USER!"
+
+# Печатаем текущую директорию
+echo "Working directory: $(pwd)"
+
+# Считаем количество процессов с именем bioset (без grep)
+bioset_count=$(ps aux | grep '[b]ioset' | wc -l)
+echo "Number of bioset processes: $bioset_count"
+
+# Выводим права на файл /etc/passwd
+ls -l /etc/passwd | awk '{print $1}'
